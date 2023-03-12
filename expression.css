@@ -1,0 +1,110 @@
+*,
+:root {
+  --ztree-width: 220px;
+  --ztree-margin-top: 6px;
+}
+p,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font: initial;
+}
+
+.expression-content {
+  display: flex;
+}
+.expression-wrap .expression-content select,
+.expression-wrap .expression-content .select-tree {
+  width: var(--ztree-width);
+  margin-right: 10px;
+  border: 1px solid #999;
+  border-radius: 2px;
+  font-size: 16px;
+  color: #333;
+  position: relative;
+}
+
+.expression-wrap .expression-content .select-tree .ztree {
+  position: absolute;
+  width: var(--ztree-width);
+  height: auto;
+  z-index: 1;
+  margin-top: var(--ztree-margin-top);
+  box-sizing: border-box;
+}
+
+.expression-wrap .expression-content .select-tree .select-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.expression-wrap .expression-content .select-tree .select-input {
+  height: 100%;
+  width: 100%;
+}
+
+.expression-wrap .expression-content .select-tree .arrow-down {
+  display: inline-block;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  width: 5px;
+  height: 5px;
+  border-color: #333;
+  border-radius: 0;
+  background-color: transparent;
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translate(0%, -100%) rotate(135deg);
+}
+
+.expression-wrap .content-add-delete-item,
+.expression-wrap .add-expression-button-wrap p .add-sub-item {
+  background-color: gray;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.expression-wrap span,
+.expression-wrap p {
+  cursor: pointer;
+}
+
+.expression-wrap .add-expression-button-wrap p {
+  display: inline-block;
+  border: 1px solid lightgrey;
+  vertical-align: top;
+  padding: 1px;
+  border-radius: 2px;
+}
+
+.expression-wrap .add-expression-button-wrap p span {
+  margin-right: 5px;
+}
+
+/* and or 操作符 */
+.expression-operator {
+  display: flex;
+  align-items: center;
+}
+
+.expression-operator > select {
+  margin-right: 12px;
+}
+
+/* hidden */
+.hidden {
+  display: none;
+}
